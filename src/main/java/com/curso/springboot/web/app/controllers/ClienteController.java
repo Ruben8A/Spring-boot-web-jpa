@@ -22,6 +22,7 @@ public class ClienteController {
 	@Autowired
 	private IClienteService clienteService; //Inyección de interfaz cliente service
 	
+	//Método para listado de cliente.
 	@RequestMapping(value="/listar", method=RequestMethod.GET)
 	public String listar(Model model) {
 		model.addAttribute("titulo", "Listado de clientes");
