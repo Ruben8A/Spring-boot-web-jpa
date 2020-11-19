@@ -20,7 +20,7 @@ import com.curso.springboot.web.app.models.service.IClienteService;
 public class ClienteController {
 
 	@Autowired
-	private IClienteService clienteService;
+	private IClienteService clienteService; //Inyección de interfaz cliente service
 	
 	@RequestMapping(value="/listar", method=RequestMethod.GET)
 	public String listar(Model model) {
@@ -54,6 +54,7 @@ public class ClienteController {
 		return "form";
 	}
 	
+	//eliminar cliente 
 	@RequestMapping(value="/eliminar/{id}")
 	public String eliminar(@PathVariable(value="id") Long id) {
 		if(id > 0) {
